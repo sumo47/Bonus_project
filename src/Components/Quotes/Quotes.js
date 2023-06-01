@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Link} from 'react-router-dom'
 import quotes from './Quotes.json'
 const data = quotes.quotes
 
@@ -17,6 +18,7 @@ export default function Quotes () {
 
   return (<div className="container text-center">
     <h1>Quotes</h1>
+    <Link to='/Counter'>CounterApp</Link>
     <div>
       {!isChange &&
         <button className="btn btn-success" onClick={() => setIsChange(true)}>START</button>
